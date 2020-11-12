@@ -1,12 +1,14 @@
 package com.epam.springexample.model;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -19,15 +21,14 @@ public class UserImpl implements User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "user_id") //it is just demonstration, we can just to name column userId
     private long id;
     private String name;
     private String email;
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, targetEntity = UserAccountImpl.class) //CascadeType.ALL need to seve UserUccount before User
     @JoinColumn(name = "user_id")
+    @MapsId //makes ids parent entity and child the same. Otherwise ids in user and userAccount will be different
     private UserAccount userAccount;
-
-    public UserImpl() {
-    }
 
     public UserImpl(String name, String email, UserAccount userAccount) {
         this.name = name;

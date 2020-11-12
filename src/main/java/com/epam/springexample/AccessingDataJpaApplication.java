@@ -13,12 +13,10 @@ import org.springframework.context.annotation.Bean;
 
 import com.epam.springexample.model.Customer;
 import com.epam.springexample.model.EventImpl;
-import com.epam.springexample.model.TicketImpl;
 import com.epam.springexample.model.UserAccountImpl;
 import com.epam.springexample.model.UserImpl;
 import com.epam.springexample.repositories.CustomerRepository;
 import com.epam.springexample.repositories.EventRepository;
-import com.epam.springexample.repositories.TicketRepository;
 import com.epam.springexample.repositories.UserRepository;
 
 @SpringBootApplication
@@ -33,32 +31,14 @@ public class AccessingDataJpaApplication {
 	}
 
 		@Bean
-	public CommandLineRunner testEventRepository(EventRepository repository) {
+	public CommandLineRunner testRepositories(EventRepository eventRepository, UserRepository userRepository) {
 		return (args) -> {
 //			 save a few events
-			repository.save(new EventImpl("Romeo and Juliet", LocalDateTime.of(2020,
-					Month.NOVEMBER, 11, 18, 30, 40)));
+			eventRepository.save(new EventImpl("Romeo and Juliet", LocalDateTime.of(2020,
+					Month.NOVEMBER, 12, 18, 30, 40)));
+			userRepository.save(new UserImpl("Yevhenii","yevhenii_trokhniuk@epam.com",new UserAccountImpl(10.0d)));
 		};
 	}
-
-//	@Bean
-//	public CommandLineRunner testEventRepository(EventRepository repository) {
-//		return (args) -> {
-////			 save a few events
-//			repository.save(new EventImpl("Romeo and Juliet", LocalDateTime.of(2020,
-//					Month.SEPTEMBER, 15, 19, 30, 40)));
-//		};
-//	}
-
-//	@Bean
-//	public CommandLineRunner testUserRepository(UserRepository repository) {
-//		return (args) -> {
-////			 save a few users
-//			repository.save(new UserImpl("Yevhenii", "Yevhenii@email.com", new UserAccountImpl(10.2d)));
-//			repository.save(new UserImpl("Sergei", "Sergei@email.com", new UserAccountImpl(11.2d)));
-//			repository.save(new UserImpl("Alexey", "Alexey@email.com", new UserAccountImpl(100.2d)));
-//		};
-//	}
 
 //	@Bean
 //	public CommandLineRunner testCustomerRepository(CustomerRepository repository) {
