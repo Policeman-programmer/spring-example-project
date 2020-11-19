@@ -22,7 +22,7 @@ import com.epam.springexample.repositories.UserRepository;
 @SpringBootApplication
 public class AccessingDataJpaApplication {
 
-	private static final Logger log = LoggerFactory.getLogger(AccessingDataJpaApplication.class);
+//	private static final Logger log = LoggerFactory.getLogger(AccessingDataJpaApplication.class);
 
 	public static void main(String[] args) {
 		SpringApplication app = new SpringApplication(AccessingDataJpaApplication.class);
@@ -30,15 +30,15 @@ public class AccessingDataJpaApplication {
 		app.run(args);
 	}
 
-		@Bean
-	public CommandLineRunner testRepositories(EventRepository eventRepository, UserRepository userRepository) {
-		return (args) -> {
-//			 save a few events
-			eventRepository.save(new EventImpl("Romeo and Juliet", LocalDateTime.of(2020,
-					Month.NOVEMBER, 12, 18, 30, 40)));
-			userRepository.save(new UserImpl("Yevhenii","yevhenii_trokhniuk@epam.com",new UserAccountImpl(10.0d)));
-		};
-	}
+//		@Bean
+//	public CommandLineRunner testRepositories(EventRepository eventRepository, UserRepository userRepository) {
+//		return (args) -> {
+////			 save a few events
+//			eventRepository.save(new EventImpl("Romeo and Juliet", LocalDateTime.of(2020,
+//					Month.NOVEMBER, 12, 18, 30, 40)));
+//			userRepository.save(new UserImpl("Yevhenii","yevhenii_trokhniuk@epam.com",new UserAccountImpl(10.0d)));
+//		};
+//	}
 
 //	@Bean
 //	public CommandLineRunner testCustomerRepository(CustomerRepository repository) {
