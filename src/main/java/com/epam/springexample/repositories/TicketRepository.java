@@ -1,4 +1,4 @@
-//package com.epam.springexample.repositories;
+package com.epam.springexample.repositories;
 //
 //import org.springframework.data.repository.CrudRepository;
 //

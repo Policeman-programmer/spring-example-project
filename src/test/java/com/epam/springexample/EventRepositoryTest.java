@@ -17,7 +17,7 @@ import com.epam.springexample.repositories.EventRepository;
 class EventRepositoryTest {
 
     @Autowired
-    private TestEntityManager entityManager; //todo: to learn what is it and how it use
+    private TestEntityManager entityManager; //The purpose of the EntityManager is to interact with the persistence context.
 
     @Autowired
     EventRepository eventRepository;

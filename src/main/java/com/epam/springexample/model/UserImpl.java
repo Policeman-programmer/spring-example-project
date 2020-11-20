@@ -30,6 +30,9 @@ public class UserImpl implements User {
     @MapsId //makes ids parent entity and child the same. Otherwise ids in user and userAccount will be different
     private UserAccount userAccount;
 
+    public UserImpl() {
+    }
+
     public UserImpl(String name, String email, UserAccount userAccount) {
         this.name = name;
         this.email = email;
