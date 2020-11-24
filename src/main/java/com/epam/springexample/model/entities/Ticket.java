@@ -1,10 +1,13 @@
 package com.epam.springexample.model.entities;
 
+import com.epam.springexample.model.EventImpl;
+import com.epam.springexample.model.UserImpl;
+
 /**
  * Created by maksym_govorischev.
  */
 public interface Ticket {
-    public enum Category {STANDARD, PREMIUM, BAR}
+    enum Category {STANDARD, PREMIUM, BAR}
 
     /**
      * Ticket Id. UNIQUE.
@@ -12,10 +15,10 @@ public interface Ticket {
      */
     long getId();
     void setId(long id);
-    long getEvent();
-    void setEvent(long event);
-    long getUser();
-    void setUser(long user);
+    EventImpl getEvent();
+    void setEvent(EventImpl event);
+    UserImpl getUser();
+    void setUser(UserImpl user);
     Category getCategory();
     void setCategory(Category category);
     int getPlace();

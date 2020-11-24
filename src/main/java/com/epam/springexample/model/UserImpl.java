@@ -26,9 +26,9 @@ public class UserImpl implements User {
     private String name;
     private String email;
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, targetEntity = UserAccountImpl.class) //CascadeType.ALL need to seve UserUccount before User
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id") //allows you to specify the Foreign Key column name
     @MapsId //makes ids parent entity and child the same. Otherwise ids in user and userAccount will be different
-    private UserAccount userAccount;
+    private UserAccount userAccount; //todo: make relation with table not by user_id it should be different ids
 
     public UserImpl() {
     }
