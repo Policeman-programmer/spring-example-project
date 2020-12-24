@@ -3,7 +3,7 @@ package com.epam.springexample.model.entities;
 import java.time.LocalDateTime;
 
 /**
- * Created by maksym_govorischev.
+ * Created by yevhenii_trokhniuk.
  */
 public interface Event {
     /**

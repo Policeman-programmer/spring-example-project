@@ -1,4 +1,4 @@
-package com.epam.springexample;
+package com.epam.springexample.repositorys;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

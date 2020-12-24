@@ -4,7 +4,7 @@ import com.epam.springexample.model.EventImpl;
 import com.epam.springexample.model.UserImpl;
 
 /**
- * Created by maksym_govorischev.
+ * Created by yevhenii_trokhniuk.
  */
 public interface Ticket {
     enum Category {STANDARD, PREMIUM, BAR}

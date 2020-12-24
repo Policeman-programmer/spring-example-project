@@ -1,7 +1,7 @@
 package com.epam.springexample.model.entities;
 
 /**
- * Created by maksym_govorischev on 14/03/14.
+ * Created by yevhenii_trokhniuk on 25/11/20.
  */
 public interface User {
     /**
