@@ -24,7 +24,7 @@ class UserRepositoryTest {
     UserRepository userRepository;
 
     @Test
-    void testFindByTitle() {
+    void testFindByName() {
         UserAccountImpl userAccount = new UserAccountImpl(10d);
         UserImpl user = new UserImpl("Yevhenii Trokhniuk", "yevhenii_trokhniuk@epam.com", userAccount);
         entityManager.persist(user);
