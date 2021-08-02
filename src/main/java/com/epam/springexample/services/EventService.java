@@ -4,10 +4,13 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.epam.springexample.dao.EventDAO;
 import com.epam.springexample.model.entities.Event;
 
+@Service
 public class EventService {
 
     @Autowired

@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.epam.springexample.model.entities.Event;
 import com.epam.springexample.model.entities.Ticket;
@@ -15,6 +16,7 @@ import com.epam.springexample.services.EventService;
 import com.epam.springexample.services.TicketService;
 import com.epam.springexample.services.UserService;
 
+@Component
 public class BookingFacadeImpl implements BookingFacade {
 
     private static final Logger LOGGER = LogManager.getLogger(BookingFacadeImpl.class);

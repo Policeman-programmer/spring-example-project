@@ -2,8 +2,11 @@ package com.epam.springexample.services;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.epam.springexample.model.entities.User;
 
+@Service
 public class UserService {
 
     UserService() {

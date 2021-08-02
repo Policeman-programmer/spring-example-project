@@ -6,11 +6,13 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.epam.springexample.model.EventImpl;
 import com.epam.springexample.model.entities.Event;
 import com.epam.springexample.repositories.EventRepository;
 
+@Component
 public class EventDAO {
 
     private static final Logger logger = LogManager.getLogger(EventDAO.class);

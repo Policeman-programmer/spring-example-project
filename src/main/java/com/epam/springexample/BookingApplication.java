@@ -6,10 +6,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AccessingDataJpaApplication {
+public class BookingApplication {
 
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(AccessingDataJpaApplication.class);
+        SpringApplication app = new SpringApplication(BookingApplication.class);
         app.setDefaultProperties(Collections.singletonMap("server.port", "8083"));
         app.run(args);
     }
