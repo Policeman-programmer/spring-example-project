@@ -1,0 +1,16 @@
+Create Spring based module, which handles event tickets booking.
+
+1. Implement three service classes
+•	UserService
+•	EventService
+•	TicketService
+which should contain user, event and booking related functionality accordingly.
++ Create implementation of BookingFacade interface which should delegate method calls to services mentioned above.
+cover BookingFacadeImpl by unit tests.
+
++ 2. Implement DAO objects for each of the domain model entities
+
+3.Implement annotation-based controllers that will delegate to BookingFacade methods.
+  For methods, that accept Entity, just send the list of parameters from the client and
+  assemble the entity in controller, no need in automatic conversion of request payload
+  to java object
